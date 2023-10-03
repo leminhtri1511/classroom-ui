@@ -18,25 +18,9 @@ class _NotificationsLabelState extends State<NotificationsLabel> {
       padding: const EdgeInsets.all(15),
       child: Row(
         children: [
-          // Container(
-          //   // height: 60,
-          //   // width: 60,
-          //   // padding: const EdgeInsets.all(40),
-          //   // color: AppColors.lightblue,
-          //   decoration: BoxDecoration(
-          //     borderRadius: BorderRadius.circular(99),
-          //     color: AppColors.lightblue,
-          //     image: DecorationImage(image: NetworkImage(ImageUrl.avatar))
-          //   ),
-          //   // child: Icon(
-          //   //   CupertinoIcons.person_fill,
-          //   //   size: 60,
-          //   //   color: AppColors.blue,
-          //   // ),
-          // ),
           Image.asset(
             AppImage.profile,
-            width: 70,
+            width: 50,
           ),
           const SizedBox(width: 16),
           const Expanded(
@@ -48,12 +32,13 @@ class _NotificationsLabelState extends State<NotificationsLabel> {
                   maxLines: 1,
                   fontWeight: FontWeight.bold,
                   overflow: TextOverflow.ellipsis,
-                  fontSize: 20,
+                  fontSize: 18,
                 ),
                 Paragraph(
                   content: 'See details',
                   fontWeight: FontWeight.bold,
-                  fontSize: 20,
+                  overflow: TextOverflow.ellipsis,
+                  fontSize: 18,
                 ),
               ],
             ),

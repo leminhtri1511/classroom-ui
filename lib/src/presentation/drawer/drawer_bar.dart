@@ -1,5 +1,5 @@
 import 'package:classroom/src/config/constants/app_colors.dart';
-import 'package:classroom/src/config/constants/class_name.dart';
+import 'package:classroom/src/config/constants/class_details.dart';
 import 'package:classroom/src/config/text/paragraph.dart';
 import 'package:classroom/src/presentation/app_router.dart';
 import 'package:classroom/src/presentation/drawer/components/registered_class.dart';
@@ -116,23 +116,28 @@ class DrawerBar extends StatelessWidget {
             const SizedBox(height: 10),
             RegisteredClass(
               circleColor: AppColors.blue,
-              className: ClassName.flutter,
+              className: ClassDetails.flutter,
+              classId: ClassDetails.flutterId,
             ),
             RegisteredClass(
               circleColor: AppColors.green,
-              className: ClassName.dataManage,
+              className: ClassDetails.dataManage,
+              classId: ClassDetails.dataManageId,
             ),
             RegisteredClass(
               circleColor: AppColors.purple,
-              className: ClassName.dataStructures,
+              className: ClassDetails.dataStructures,
+              classId: ClassDetails.dataStructuresId,
             ),
             RegisteredClass(
               circleColor: AppColors.orange,
-              className: ClassName.designPatterns,
+              className: ClassDetails.designPatterns,
+              classId: ClassDetails.designPatternsId,
             ),
             RegisteredClass(
               circleColor: AppColors.pink,
-              className: ClassName.reactNative,
+              className: ClassDetails.reactNative,
+              classId: ClassDetails.reactNativeId,
             ),
           ],
         ),

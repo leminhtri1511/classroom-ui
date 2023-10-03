@@ -1,5 +1,6 @@
 import 'package:classroom/src/config/constants/app_colors.dart';
-import 'package:classroom/src/config/constants/class_name.dart';
+import 'package:classroom/src/config/constants/class_details.dart';
+import 'package:classroom/src/config/constants/teacher_name.dart';
 import 'package:classroom/src/presentation/home/components/class_card.dart';
 import 'package:classroom/src/presentation/home/components/work_details.dart';
 import 'package:classroom/src/presentation/drawer/drawer_bar.dart';
@@ -56,28 +57,28 @@ class _HomeState extends State<Home> {
                   const WorkDetails(),
                   ClassCard(
                     color: AppColors.blue,
-                    className: ClassName.flutter,
-                    teacherName: 'Teacher 1',
+                    className: ClassDetails.flutter,
+                    teacherName: TeacherName.nguyenDung,
                   ),
                   ClassCard(
                     color: AppColors.green,
-                    className: ClassName.dataManage,
-                    teacherName: 'Teacher 2',
+                    className: ClassDetails.dataManage,
+                    teacherName: TeacherName.leMinhTri,
                   ),
                   ClassCard(
                     color: AppColors.purple,
-                    className: ClassName.dataStructures,
-                    teacherName: 'Teacher 3',
+                    className: ClassDetails.dataStructures,
+                    teacherName: TeacherName.leAnhTuan,
                   ),
                   ClassCard(
                     color: AppColors.orange,
-                    className: ClassName.designPatterns,
-                    teacherName: 'Teacher 4',
+                    className: ClassDetails.designPatterns,
+                    teacherName: TeacherName.nguyenHoangHa,
                   ),
                   ClassCard(
                     color: AppColors.pink,
-                    className: ClassName.reactNative,
-                    teacherName: 'Teacher 5',
+                    className: ClassDetails.reactNative,
+                    teacherName: TeacherName.nguyenVanTrung,
                   ),
                 ],
               ),
