@@ -83,24 +83,22 @@ class DrawerBar extends StatelessWidget {
 
   Widget buildClassPage(BuildContext context) => Column(
         children: [
-          ListTile(
-            onTap: () {
-              // Navigator.pop(context);
-              AppRouter.goToHome(context);
-            },
-            leading: const Icon(Icons.home_filled),
-            title: const Text('Class'),
+          const ListTile(
+            leading: Icon(Icons.home_filled),
+            title: Text('Class'),
           ),
           ListTile(
-            onTap: () {},
+            onTap: () => showDatePicker(
+              context: context,
+              initialDate: DateTime.now(),
+              firstDate: DateTime(1975),
+              lastDate: DateTime(2099),
+            ),
             leading: const Icon(Icons.calendar_today),
             title: const Text('Schedule'),
           ),
           ListTile(
-            onTap: () {
-              // Navigator.pop(context);
-              AppRouter.goToNotifications(context);
-            },
+            onTap: () => AppRouter.goToNotifications(context),
             leading: const Icon(Icons.notifications_none_rounded),
             title: const Text('Notifications'),
           ),

@@ -23,7 +23,7 @@ class RegisteredClass extends StatelessWidget {
           CircleAvatar(
             backgroundColor: circleColor,
             child: Paragraph(
-              content: className?.substring(0, 1) ?? '?',
+              content: className?.substring(0, 1).toUpperCase() ?? '?',
               fontSize: 20,
               fontWeight: FontWeight.w400,
               color: const Color.fromARGB(255, 234, 232, 232),

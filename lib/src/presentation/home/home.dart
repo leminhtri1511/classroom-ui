@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:classroom/src/config/constants/app_colors.dart';
 import 'package:classroom/src/config/constants/class_details.dart';
 import 'package:classroom/src/config/constants/teacher_name.dart';
@@ -5,6 +7,7 @@ import 'package:classroom/src/presentation/home/components/class_card.dart';
 import 'package:classroom/src/presentation/home/components/work_details.dart';
 import 'package:classroom/src/presentation/drawer/drawer_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -13,14 +16,22 @@ class Home extends StatefulWidget {
   State<Home> createState() => _HomeState();
 }
 
+Future<bool> exitApp() async {
+  await SystemNavigator.pop();
+  return true;
+}
+
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: buildAppBar(),
-      drawer: const DrawerBar(),
-      body: buildClassesLabel(),
-      floatingActionButton: buildFloatingButton(),
+    return WillPopScope(
+      onWillPop: () => exitApp(),
+      child: Scaffold(
+        appBar: buildAppBar(),
+        drawer: const DrawerBar(),
+        body: buildClassesLabel(),
+        floatingActionButton: buildFloatingButton(),
+      ),
     );
   }
 
