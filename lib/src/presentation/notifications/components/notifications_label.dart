@@ -4,14 +4,14 @@ import 'package:flutter/material.dart';
 
 import '../../../config/text/paragraph.dart';
 
-class NotificationsLabel extends StatefulWidget {
-  const NotificationsLabel({super.key});
+class NotificationsLabel extends StatelessWidget {
+  const NotificationsLabel({
+    super.key,
+    this.teacherName,
+  });
 
-  @override
-  State<NotificationsLabel> createState() => _NotificationsLabelState();
-}
+  final String? teacherName;
 
-class _NotificationsLabelState extends State<NotificationsLabel> {
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -23,18 +23,19 @@ class _NotificationsLabelState extends State<NotificationsLabel> {
             width: 50,
           ),
           const SizedBox(width: 16),
-          const Expanded(
+          Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Paragraph(
-                  content: 'New exercises',
-                  maxLines: 1,
+                  content: teacherName == null
+                      ? 'New homework'
+                      : 'New homework assigned by $teacherName',
                   fontWeight: FontWeight.bold,
                   overflow: TextOverflow.ellipsis,
                   fontSize: 18,
                 ),
-                Paragraph(
+                const Paragraph(
                   content: 'See details',
                   fontWeight: FontWeight.bold,
                   overflow: TextOverflow.ellipsis,
@@ -43,7 +44,6 @@ class _NotificationsLabelState extends State<NotificationsLabel> {
               ],
             ),
           ),
-          // const Spacer(),
           const Padding(
             padding: EdgeInsets.only(bottom: 30.0),
             child: Paragraph(content: 'November 15'),

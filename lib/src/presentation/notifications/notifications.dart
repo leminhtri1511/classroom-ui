@@ -1,3 +1,4 @@
+import 'package:classroom/src/config/constants/teacher_name.dart';
 import 'package:classroom/src/config/text/paragraph.dart';
 import 'package:classroom/src/presentation/notifications/components/notifications_label.dart';
 import 'package:flutter/material.dart';
@@ -47,13 +48,13 @@ class Notifications extends StatelessWidget {
         children: [
           Expanded(
             child: ListView(
-              children: const [
-                NotificationsLabel(),
-                NotificationsLabel(),
-                NotificationsLabel(),
-                NotificationsLabel(),
-                NotificationsLabel(),
-                NotificationsLabel(),
+              children: [
+                NotificationsLabel(teacherName: TeacherName.nguyenDung),
+                const NotificationsLabel(),
+                NotificationsLabel(teacherName: TeacherName.nguyenHoangHa),
+                const NotificationsLabel(),
+                const NotificationsLabel(),
+                const NotificationsLabel(),
               ],
             ),
           ),
