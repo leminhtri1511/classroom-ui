@@ -29,9 +29,10 @@ class Paragraph extends StatelessWidget {
       textAlign: textAlign,
       content ?? '',
       style: TextStyle(
+        fontFamily: 'Quicksand',
         color: color,
         fontSize: fontSize,
-        fontWeight: fontWeight,
+        fontWeight: FontWeight.w600,
       ),
       overflow: overflow,
     );

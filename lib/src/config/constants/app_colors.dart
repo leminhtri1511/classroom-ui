@@ -10,8 +10,10 @@ class AppColors {
   static Color purple = const Color.fromARGB(255, 118, 40, 201);
 
   static Color orange = const Color.fromARGB(255, 201, 118, 40);
-  
+
   static Color pink = const Color.fromARGB(255, 201, 40, 99);
 
   static Color grey = const Color.fromARGB(255, 108, 105, 105);
+
+  static Color white = Colors.white;
 }

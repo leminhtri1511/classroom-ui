@@ -1,3 +1,4 @@
+import 'package:classroom/src/config/constants/app_colors.dart';
 import 'package:flutter/material.dart';
 
 import '../../../config/text/paragraph.dart';
@@ -34,26 +35,31 @@ class ClassCard extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Paragraph(
-                      content: className ?? '?',
+                      content: className ?? '[ Class name ?? ]',
                       overflow: TextOverflow.ellipsis,
                       color: Colors.white,
                       fontSize: 20,
                     ),
                     const Spacer(),
                     Paragraph(
-                      content: teacherName ?? '?',
+                      content: teacherName ?? '[ Teacher name ?? ]',
                       overflow: TextOverflow.ellipsis,
                       color: Colors.white,
                     ),
                   ],
                 ),
               ),
-              // const Spacer(),
-              const Column(
+              Column(
                 children: [
-                  Icon(
-                    Icons.more_vert,
-                    color: Colors.white,
+                  PopupMenuButton(
+                    color: AppColors.white,
+                    itemBuilder: (context) => [
+                      const PopupMenuItem(
+                        child: Paragraph(
+                          content: 'Cancel registration',
+                        ),
+                      )
+                    ],
                   ),
                 ],
               )

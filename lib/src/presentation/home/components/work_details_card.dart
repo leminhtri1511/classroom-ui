@@ -1,8 +1,9 @@
+import 'package:classroom/src/config/constants/app_colors.dart';
+import 'package:classroom/src/config/text/paragraph.dart';
 import 'package:flutter/material.dart';
 
-
-class WorkDetails extends StatelessWidget {
-  const WorkDetails({
+class WorkDetailsCard extends StatelessWidget {
+  const WorkDetailsCard({
     super.key,
     this.className,
     this.teacherName,
@@ -29,10 +30,9 @@ class WorkDetails extends StatelessWidget {
             children: [
               const Row(
                 children: [
-                  Text('This week', style: TextStyle(fontSize: 20)),
+                  Paragraph(content: 'This week', fontSize: 20),
                   Spacer(),
-                  Text('See work details',
-                      style: TextStyle(fontSize: 17, color: Colors.blue)),
+                  Paragraph(content: 'See work details', color: Colors.blue)
                 ],
               ),
               const Spacer(),
@@ -46,13 +46,13 @@ class WorkDetails extends StatelessWidget {
                           text: '0 ',
                           style: TextStyle(fontSize: 25),
                         ),
-                        TextSpan(text: 'assigned'),
+                        WidgetSpan(child: Paragraph(content: 'assigned')),
                         WidgetSpan(child: SizedBox(width: 13)),
                         TextSpan(
                           text: '0 ',
                           style: TextStyle(fontSize: 25),
                         ),
-                        TextSpan(text: 'overdue'),
+                        WidgetSpan(child: Paragraph(content: 'overdue')),
                       ],
                     ),
                   ),

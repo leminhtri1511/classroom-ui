@@ -8,12 +8,12 @@ class RegisteredClass extends StatelessWidget {
     super.key,
     this.className,
     this.classId,
-    required this.circleColor,
+    required this.leadingColor,
   });
 
   final String? className;
   final String? classId;
-  final Color circleColor;
+  final Color leadingColor;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -21,11 +21,11 @@ class RegisteredClass extends StatelessWidget {
       child: Row(
         children: [
           CircleAvatar(
-            backgroundColor: circleColor,
+            backgroundColor: leadingColor,
             child: Paragraph(
               content: className?.substring(0, 1).toUpperCase() ?? '?',
               fontSize: 20,
-              fontWeight: FontWeight.w400,
+              fontWeight: FontWeight.w500,
               color: const Color.fromARGB(255, 234, 232, 232),
             ),
           ),
@@ -37,13 +37,13 @@ class RegisteredClass extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Paragraph(
-                  content: className ?? '?',
+                  content: className ?? '[ Class name ?? ]',
                   fontSize: 15,
                   overflow: TextOverflow.ellipsis,
                 ),
 
                 Paragraph(
-                  content: classId ?? '?',
+                  content: classId ?? '[ Class id ?? ]',
                   color: AppColors.grey,
                 )
               ],

@@ -85,7 +85,7 @@ class DrawerBar extends StatelessWidget {
         children: [
           const ListTile(
             leading: Icon(Icons.home_filled),
-            title: Text('Class'),
+            title: Paragraph(content: 'Class'),
           ),
           ListTile(
             onTap: () => showDatePicker(
@@ -95,12 +95,12 @@ class DrawerBar extends StatelessWidget {
               lastDate: DateTime(2099),
             ),
             leading: const Icon(Icons.calendar_today),
-            title: const Text('Schedule'),
+            title: const Paragraph(content: 'Schedule'),
           ),
           ListTile(
             onTap: () => AppRouter.goToNotifications(context),
             leading: const Icon(Icons.notifications_none_rounded),
-            title: const Text('Notifications'),
+            title: const Paragraph(content: 'Notifications'),
           ),
         ],
       );
@@ -110,30 +110,31 @@ class DrawerBar extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            const Text('Registered'),
+            const Paragraph(content: 'Registered'),
             const SizedBox(height: 10),
+            RegisteredClass(leadingColor: AppColors.grey),
             RegisteredClass(
-              circleColor: AppColors.blue,
+              leadingColor: AppColors.blue,
               className: ClassDetails.flutter,
               classId: ClassDetails.flutterId,
             ),
             RegisteredClass(
-              circleColor: AppColors.green,
+              leadingColor: AppColors.green,
               className: ClassDetails.dataManage,
               classId: ClassDetails.dataManageId,
             ),
             RegisteredClass(
-              circleColor: AppColors.purple,
+              leadingColor: AppColors.purple,
               className: ClassDetails.dataStructures,
               classId: ClassDetails.dataStructuresId,
             ),
             RegisteredClass(
-              circleColor: AppColors.orange,
+              leadingColor: AppColors.orange,
               className: ClassDetails.designPatterns,
               classId: ClassDetails.designPatternsId,
             ),
             RegisteredClass(
-              circleColor: AppColors.pink,
+              leadingColor: AppColors.pink,
               className: ClassDetails.reactNative,
               classId: ClassDetails.reactNativeId,
             ),
