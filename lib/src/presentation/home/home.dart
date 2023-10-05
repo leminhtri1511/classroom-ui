@@ -75,7 +75,7 @@ class _HomeState extends State<Home> {
               child: ListView(
                 children: [
                   const WorkDetailsCard(),
-                  ClassCard(color: AppColors.grey),
+                  const ClassCard(),
                   ClassCard(
                     color: AppColors.blue,
                     className: ClassDetails.flutter,

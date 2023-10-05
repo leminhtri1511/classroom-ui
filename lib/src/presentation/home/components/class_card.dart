@@ -6,12 +6,12 @@ import '../../../config/text/paragraph.dart';
 class ClassCard extends StatelessWidget {
   const ClassCard({
     super.key,
-    required this.color,
+    this.color,
     this.className,
     this.teacherName,
   });
 
-  final Color color;
+  final Color? color;
   final String? className;
   final String? teacherName;
 
@@ -23,7 +23,7 @@ class ClassCard extends StatelessWidget {
         height: 150,
         width: double.infinity,
         decoration: BoxDecoration(
-          color: color,
+          color: color ?? AppColors.grey,
           borderRadius: BorderRadius.circular(10),
         ),
         child: Padding(

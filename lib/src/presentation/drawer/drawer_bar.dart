@@ -112,7 +112,7 @@ class DrawerBar extends StatelessWidget {
           children: [
             const Paragraph(content: 'Registered'),
             const SizedBox(height: 10),
-            RegisteredClass(leadingColor: AppColors.grey),
+            const RegisteredClass(),
             RegisteredClass(
               leadingColor: AppColors.blue,
               className: ClassDetails.flutter,

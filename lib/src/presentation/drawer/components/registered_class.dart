@@ -8,12 +8,12 @@ class RegisteredClass extends StatelessWidget {
     super.key,
     this.className,
     this.classId,
-    required this.leadingColor,
+    this.leadingColor,
   });
 
   final String? className;
   final String? classId;
-  final Color leadingColor;
+  final Color? leadingColor;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -21,7 +21,7 @@ class RegisteredClass extends StatelessWidget {
       child: Row(
         children: [
           CircleAvatar(
-            backgroundColor: leadingColor,
+            backgroundColor: leadingColor ?? AppColors.grey,
             child: Paragraph(
               content: className?.substring(0, 1).toUpperCase() ?? '?',
               fontSize: 20,
@@ -41,7 +41,6 @@ class RegisteredClass extends StatelessWidget {
                   fontSize: 15,
                   overflow: TextOverflow.ellipsis,
                 ),
-
                 Paragraph(
                   content: classId ?? '[ Class id ?? ]',
                   color: AppColors.grey,
