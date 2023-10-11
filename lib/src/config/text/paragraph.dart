@@ -4,7 +4,7 @@ import 'package:flutter/widgets.dart';
 class Paragraph extends StatelessWidget {
   const Paragraph({
     super.key,
-    this.content,
+    required this.content,
     this.style,
     this.fontWeight,
     this.color,
@@ -13,7 +13,7 @@ class Paragraph extends StatelessWidget {
     this.maxLines,
     this.fontSize,
   });
-  final String? content;
+  final String content;
   final TextStyle? style;
   final FontWeight? fontWeight;
   final Color? color;
@@ -25,9 +25,9 @@ class Paragraph extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Text(
+      content,
       maxLines: maxLines,
       textAlign: textAlign,
-      content ?? '',
       style: TextStyle(
         fontFamily: 'Quicksand',
         color: color,

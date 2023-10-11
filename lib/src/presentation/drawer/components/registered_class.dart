@@ -29,9 +29,7 @@ class RegisteredClass extends StatelessWidget {
               color: const Color.fromARGB(255, 234, 232, 232),
             ),
           ),
-          const SizedBox(
-            width: 16,
-          ),
+          const SizedBox(width: 16),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
